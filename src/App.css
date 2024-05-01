@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.board {
+  width: calc(64px * 8);
+  height: calc(64px * 8);
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #777;
+}
+
+.cell {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell img {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.cell.selected {
+  background-color: rgb(158, 208, 255);
+}
+
+.cell.available {
+  background-color: rgb(190, 255, 190);
+}
+
+.cell.attackable {
+  /* background-color: rgb(113, 255, 113); */
+  background-color: rgb(248, 126, 126);
+}
+
+.black {
+  background-color: #777;
+}
+
+.white {
+  background-color: #ddd;
+}
+
+.lost {
+  display: block;
+  padding: 20px;
+}
+
+.timer h3,
+.lost h3 {
+  padding-bottom: 20px;
+}
+
+.lost img {
+  width: 20px;
+  height: 20px;
+}
+
+.timer {
+  padding: 20px;
+}
+
+.restart {
+  padding: 7px 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #777;
+  background-color: #ddd;
+  transition: all ease-in-out .1s;
+}
+
+.restart:hover {
+  background-color: #000;
+  color: #fff;
+}
